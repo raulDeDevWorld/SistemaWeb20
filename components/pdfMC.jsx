@@ -90,6 +90,19 @@ const styles = StyleSheet.create({
         fontWeight: "100"
 
     },
+    keyCenter: {
+
+        margin: "0px",
+        width: "100%",
+        padding: "2px 5px 0px 5px ",
+        border: "1px solid #294B98",
+        backgroundColor: "#294B98",
+        color: "#f2f2f2",
+        fontSize: "8px",
+        fontWeight: "100",
+        textAlign: 'center'
+
+    },
     value: {
         margin: "0px",
         width: "100%",
@@ -122,6 +135,16 @@ const styles = StyleSheet.create({
         fontSize: "8px",
         fontWeight: "100",
         backgroundColor: "#294B98",
+    },
+    noValueWhite: {
+        width: "50%",
+        height: "12px",
+        padding: "2px 5px 0px 5px ",
+        border: "0.5px solid #294B98",
+        color: "#ffffff",
+        fontSize: "8px",
+        fontWeight: "100",
+        backgroundColor: "#ffffff",
     },
     valueYellow: {
         width: "25%",
@@ -214,7 +237,7 @@ function PDFView({ click }) {
                                 </View>
                                 <View style={styles.viewKeyValue}>
                                     <Text style={styles.key}>NO</Text>
-                                    <Text style={styles.value}>{pdfData && pdfData["MC-NO"] && pdfData["MC-NO"]}</Text>
+                                    <Text style={styles.value}>{pdfData && pdfData["MC-COTIZACION No"] && pdfData["MC-COTIZACION No"]}</Text>
                                 </View>
                             </View>
                             <View style={styles.viewKeyValue}>
@@ -232,7 +255,7 @@ function PDFView({ click }) {
                                 </View>
                                 <View style={styles.viewKeyValue}>
                                     <Text style={styles.key}>OPERADOR</Text>
-                                    <Text style={styles.value}>{pdfData && pdfData["MC-OPERADOR"] && pdfData["MC-OPERADOR"]}</Text>
+                                    <Text style={styles.value}>{pdfData && pdfData["operador"] && pdfData["operador"]}</Text>
                                 </View>
                             </View>
                             <View style={styles.viewKeyValue}>
@@ -245,7 +268,7 @@ function PDFView({ click }) {
                                 </View>
                             </View>
 
-                            <Br/>  
+                            <Br />
                             <View style={styles.viewKeyValue}>
                                 <Text style={styles.key}>CONSIGNARIO</Text>
                                 <Text style={styles.key}>TRANSPORTADOR</Text>
@@ -397,17 +420,17 @@ function PDFView({ click }) {
                                     <Text style={styles.key}>NUMERO</Text>
                                 </View>
                                 <View style={styles.viewKeyValue}>
-                                    <Text style={styles.value}>{pdfData && pdfData[`MC-INSTRUCCION1`] && pdfData[`MC-INSTRUCCION1`]}</Text>
+                                    <Text style={styles.value}>PLAZO DE ENTREGA</Text>
                                     <Text style={styles.value}>{pdfData && pdfData[`MC-INSTRUCCION2`] && pdfData[`MC-INSTRUCCION2`]}</Text>
                                 </View>
                             </View>
                             <View style={styles.viewKeyValue}>
                                 <View style={styles.viewKeyValue}>
-                                    <Text style={styles.value}>{pdfData && pdfData[`MC-DOC1}`] && pdfData[`MC-DOC1`]}</Text>
+                                    <Text style={styles.value}>{pdfData && pdfData[`MC-DOC1`] && pdfData[`MC-DOC1`]}</Text>
                                     <Text style={styles.value}>{pdfData && pdfData[`MC-NUM1`] && pdfData[`MC-NUM1`]}</Text>
                                 </View>
                                 <View style={styles.viewKeyValue}>
-                                    <Text style={styles.value}>{pdfData && pdfData[`MC-INSTRUCCION3`] && pdfData[`MC-INSTRUCCION3`]}</Text>
+                                    <Text style={styles.value}>INSTRUCCION ESPECIAL</Text>
                                     <Text style={styles.value}>{pdfData && pdfData[`MC-INSTRUCCION4`] && pdfData[`MC-INSTRUCCION4`]}</Text>
                                 </View>
                             </View>
@@ -465,6 +488,19 @@ function PDFView({ click }) {
                             <Text style={styles.valueElaborador}>FECHA:</Text>
                             <Text style={styles.valueElaboradorLine}>{getDayMonthYear()}</Text>
                         </View>
+                        <View style={styles.viewKeyValue} >
+                            <Text style={styles.valueElaborador}>FECHA:</Text>
+                            <Text style={styles.valueElaboradorLine}>{getDayMonthYear()}</Text>
+                            <Text style={styles.valueElaborador}>FECHA:</Text>
+                            <Text style={styles.valueElaboradorLine}>{getDayMonthYear()}</Text>
+                        </View>
+                        <View style={styles.viewKeyValue} >
+                            <Text style={styles.noValueWhite}></Text>
+
+                            <Text style={styles.keyCenter}>DESPACHADOR</Text>
+                            <Text style={styles.noValueWhite}></Text>
+                            <Text style={styles.keyCenter}>TRANSPORTISTA</Text>
+                        </View>
                         <Br />
                         <Br />
                         <View style={styles.viewKeyValue} >
@@ -484,6 +520,13 @@ function PDFView({ click }) {
                             <Text style={styles.valueElaborador}>FECHA:</Text>
                             <Text style={styles.valueElaboradorLine}>{getDayMonthYear()}</Text>
                             <Text style={styles.valueElaborador}></Text>
+                        </View>
+                        <View style={styles.viewKeyValue} >
+                            <Text style={styles.noValueWhite}></Text>
+
+                            <Text style={styles.keyCenter}>CONSIGNATARIO</Text>
+                            <Text style={styles.noValueWhite}></Text>
+
                         </View>
                     </Page>
                 </Document>}
