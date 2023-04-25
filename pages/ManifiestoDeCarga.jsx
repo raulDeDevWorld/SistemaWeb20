@@ -120,7 +120,7 @@ function generateNO() {
             <div className={style.container}>
                 <form className={style.form}>
 
-                    <div className={style.subtitle}>MANIFESTO DE CARGA </div>
+                    <div className={style.subtitle}>MANIFIESTO DE CARGA </div>
 
                     <div className={style.containerFirstItems}>
                         <div className={style.imgForm}>
@@ -128,7 +128,7 @@ function generateNO() {
                         </div>
                         <div className={style.firstItems}>
                             <div>
-                                <h2 htmlFor="">MANIFESTO DE CARGA</h2>
+                                <h2 htmlFor="">MANIFIESTO DE CARGA</h2>
                             </div>
                         </div>
                     </div>
@@ -212,13 +212,13 @@ function generateNO() {
                             </div>
 
                             <div>
-                                <input type="text" value='AV. MONTENEGRO EDIFICIO QUIÑOVEL PISO 4' />
+                                <input type="text" value='Av. 14 de Septiembre esq. Calle 17 Edificio Mario Mercado Piso 5 Of 506' />
                             </div>
                             <div>
                                 <input type="text" value='LA PAZ - BOLIVIA' />
                             </div>
                             <div>
-                                <input type="text" value='2004717 - 76203353' />
+                                <input type="text" value='+591 (2) 2780607' />
                             </div>
                         </div>
                     </div>
@@ -266,17 +266,29 @@ function generateNO() {
                     </div>
                     <br />
                     <br />
-                    <div className={style.subtitle}>iNFORMACION DEL SERVICIO</div>
+                    <div className={style.subtitle}>INFORMACION DEL SERVICIO</div>
                     <br />
                     <div className={`${style.items} ${style.newStyle}`}>
                         <div>
                             <label htmlFor="">MERCANCIA</label>
                             <input type="text" name={"MERCANCIA"} onChange={handleEventChange} />
                         </div>
+
+
                         <div>
-                            <label htmlFor="">TIPO DE CARGA</label>
-                            <input type="text" name={"TIPO DE CARGA"} onChange={handleEventChange} />
+                            <label htmlFor="">*TIPO DE CARGA</label>
+                            <select name="TIPO DE CARGA" onChange={handleEventChange}>
+                                <option value="">Seleccione una opcion</option>
+                                <option value="GENERAL">GENERAL</option>
+                                <option value="PELIGROSA">PELIGROSA</option>
+                                <option value="ESPECIAL">ESPECIAL</option>
+                                <option value="REFRIGERADA">REFRIGERADA</option>
+                                <option value="PROYECTO">PROYECTO</option>
+                            </select>
                         </div>
+
+
+
                         <div>
                             <label htmlFor="">EMPAQUE</label>
                             <select name="EMPAQUE" onChange={handleEventChange}>
@@ -377,10 +389,7 @@ function generateNO() {
                                 <input type="text" name={"DOC1"} onChange={handleEventChange} placeholder='DEX' />
                                 <input type="text" name={"NUM1"} onChange={handleEventChange} placeholder='201-2548/2022' />
                             </div>
-                            <div>
-                                <input type="text" name={"DOC2"} onChange={handleEventChange} placeholder='FACTURA COMERCIAL' />
-                                <input type="text" name={"NUM2"} onChange={handleEventChange} placeholder='55/22' />
-                            </div>
+                        
 
                             {
                                 incluye.map((i, index) => {
@@ -413,11 +422,7 @@ function generateNO() {
                                 <input type="text" name={"INSTRUCCION4"} onChange={handleEventChange} placeholder='REFRIGERAR A 18°C' />
 
                             </div>
-                            <div >
-                                <input type="text" className={style.negrita} name={"INSTRUCCION5"} onChange={handleEventChange} value={'INSTRUCCION ESPECIAL'} />
-                                <input type="text" name={"INSTRUCCION6"} onChange={handleEventChange} placeholder='ESCOLTAR' />
-
-                            </div>
+                    
                             {
                                 incluye.map((i, index) => {
                                     return (
