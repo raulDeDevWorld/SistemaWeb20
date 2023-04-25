@@ -17,7 +17,7 @@ function Admin() {
 
 
     useEffect(() => {
-        setUserPdfData({})
+        setUserPdfData({})       
     }, []);
 
     return (
