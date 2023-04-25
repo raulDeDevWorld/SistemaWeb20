@@ -466,8 +466,15 @@ function PDFView({ click }) {
                             <Text style={styles.value}>{pdfData[`MC-EXCLUYE`] && pdfData[`MC-EXCLUYE`]}</Text>
                         </View>
                         <View style={styles.viewKeyValue} >
-                            <Text style={styles.value}>{pdfData[`MC-COMENTARIO`] && pdfData[`MC-COMENTARIO`]}</Text>
-                        </View>
+                            <Text style={styles.value}> NOTA: El transportista es responsable de que la carga llegue a destino en buenas condiciones y por ningun motivo debe descargar o cargar sin previa autorizacion de la Empresa.		
+									
+<Br/>
+La firma de recepcion en este Manifiesto de Carga es la constancia de que se ha recibido la carga en destino.											
+</Text>
+                        
+
+
+</View>
                         <Br />
                         <Br />
                         <View style={styles.viewKeyValue} >
