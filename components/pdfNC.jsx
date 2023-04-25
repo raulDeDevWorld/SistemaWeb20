@@ -169,7 +169,7 @@ const PDFView = () => {
             {isCliente && <PDFDownloadLink document={
                 <Document>
                     <Page style={styles.body} >
-                        <Text style={styles.subtitle}>COTIZACIÓN TRANSPORTE </Text>
+                        <Text style={styles.subtitle}>NOTA DE TRANSPORTE</Text>
                         <View style={styles.containerIntroItems}>
                             <View style={styles.introImg}>
                                 <Image style={styles.logo} src="/logo.png" />

@@ -330,9 +330,9 @@ function CotizacionTerrestre() {
                                     <input type="text" name={`DETALLE${index}`} onChange={handleEventChange} placeholder="DETALLE" />
                                     <input type="number" name={`COSTOUNITARIO${index}`} onChange={(e) => handlerCalc(e, index)} placeholder="COSTO UNITARIO" />
                                     <input type="number" name={`CANTIDAD${index}`} onChange={(e) => handlerCalc(e, index)} placeholder="CANTIDAD" />
-                                    <input type="text" name={`PRODUCT${index}`} defaultValue={calc[`PRODUCT${index}`] && calc[`PRODUCT${index}`]} placeholder="COSTO TOTAL" />
-                                    <input type="number" name={`FACTURA${index}`} onChange={handleEventChange} placeholder="FACTURA" />
-                                    <input type="number" name={`OBSERVACION${index}`} onChange={handleEventChange} placeholder="OBSERVACION" />
+                                    <input type="number" name={`PRODUCT${index}`} defaultValue={calc[`PRODUCT${index}`] && calc[`PRODUCT${index}`]} placeholder="COSTO TOTAL" />
+                                    <input type="text" name={`FACTURA${index}`} onChange={handleEventChange} placeholder="FACTURA" />
+                                    <input type="text" name={`OBSERVACION${index}`} onChange={handleEventChange} placeholder="OBSERVACION" />
                                 </div>
                             )
                         })
