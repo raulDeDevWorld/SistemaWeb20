@@ -217,13 +217,13 @@ function PDFView({ click }) {
             {isCliente && <PDFDownloadLink document={
                 <Document>
                     <Page style={styles.body} size="A4" fixed >
-                        <Text style={styles.subtitle}>MANIFESTO DE CARGA </Text>
+                        <Text style={styles.subtitle}>MANIFIESTO DE CARGA </Text>
                         <View style={styles.containerIntroItems}>
                             <View style={styles.introImg}>
                                 <Image style={styles.logo} src="/logo.png" />
                             </View>
                             <View style={styles.introItems}>
-                                <Text style={styles.title}>MANIFESTO DE CARGA</Text>
+                                <Text style={styles.title}>MANIFIESTO DE CARGA</Text>
                             </View>
                         </View>
                         <View style={styles.items}>
@@ -488,12 +488,7 @@ function PDFView({ click }) {
                             <Text style={styles.valueElaborador}>FECHA:</Text>
                             <Text style={styles.valueElaboradorLine}>{getDayMonthYear()}</Text>
                         </View>
-                        <View style={styles.viewKeyValue} >
-                            <Text style={styles.valueElaborador}>FECHA:</Text>
-                            <Text style={styles.valueElaboradorLine}>{getDayMonthYear()}</Text>
-                            <Text style={styles.valueElaborador}>FECHA:</Text>
-                            <Text style={styles.valueElaboradorLine}>{getDayMonthYear()}</Text>
-                        </View>
+                  
                         <View style={styles.viewKeyValue} >
                             <Text style={styles.noValueWhite}></Text>
 
