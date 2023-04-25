@@ -1,6 +1,8 @@
 import { useRouter } from 'next/router'
 import Image from 'next/image'
-import { useUser, useEffect } from '../context/Context'
+import { useUser} from '../context/Context'
+import { useState, useEffect } from 'react'
+
 import { WithAuth } from '../HOCs/WithAuth'
 import Layout from '../layout/Layout'
 import Card from '../components/Card'
