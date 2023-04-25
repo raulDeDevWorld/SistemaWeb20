@@ -136,7 +136,7 @@ function Users() {
         setBank(!bank)
     }
     function closeDC() {
-        setViewForm(!bank)
+        setViewForm(!viewForm)
     }
 
     function saveUpdateBank(e) {
@@ -159,7 +159,7 @@ function Users() {
         userDB && userDB.users[user.uid] && userDB.users[user.uid].rol !== 'Admin' && router.push('/Formularios')
     }, [userDB, success])
 
-console.log(pdfData)
+    console.log(pdfData)
 
     return (
         <Layout>
@@ -247,8 +247,12 @@ console.log(pdfData)
                                 </div>
                             </div>
                             <br />
-                            <Button style='buttonSecondary' >Guardar</Button>
-                        </form>
+                            <div className={style.containerFilter}>
+
+                                <Button style='buttonSecondary'>
+                                    Guardar
+                                </Button>
+                            </div>                        </form>
                     </div>}
                 {viewForm && itemSelect == '' &&
                     <div className={style.formContainer}>
@@ -288,8 +292,12 @@ console.log(pdfData)
                                 </div>
                             </div>
                             <br />
-                            <Button style='buttonSecondary' >Guardar</Button>
-                        </form>
+                            <div className={style.containerFilter}>
+
+                                <Button style='buttonSecondary'>
+                                    Guardar
+                                </Button>
+                            </div>                        </form>
                     </div>
                 }
                 {bank && userDB && <div className={style.formContainer}>
@@ -332,12 +340,15 @@ console.log(pdfData)
                                     <input type="text" name={"DIRECCION"} onChange={handleEventChange} defaultValue={userDB.bank && userDB.bank.direccion && userDB.bank.direccion} />
                                 </div>
                             </div>
-                            
-                        </div>
-<Button style='buttonSecondary'>
-                                Datos de la empresa
-                            </Button>
 
+                        </div>
+                        <br />
+                        <div className={style.containerFilter}>
+
+                            <Button style='buttonSecondary'>
+                                Guardar
+                            </Button>
+                        </div>
 
                     </form>
                 </div>}

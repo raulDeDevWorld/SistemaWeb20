@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
 
 
 const PDFView = () => {
-    const { pdfData } = useUser()
+    const {userDB, pdfData } = useUser()
 
     const [isCliente, setisCliente] = useState(false);
     console.log(pdfData)
@@ -176,8 +176,8 @@ const PDFView = () => {
                             </View>
                             <View style={styles.introItems}>
                                 <View style={styles.introViewKeyValue}>
-                                    <Text style={styles.key}>COTIZACIÓN No</Text>
-                                    <Text style={styles.value}>{pdfData && pdfData["NC-COTIZACIÓN No"] && pdfData["NC-COTIZACIÓN No"]}</Text>
+                                    <Text style={styles.key}>NOTA DE COBRANZA NO</Text>
+                                    <Text style={styles.value}>{pdfData && pdfData["NC-COTIZACION No"] && pdfData["NC-COTIZACION No"]}</Text>
                                 </View>
                                 <View style={styles.introViewKeyValue}>
                                     <Text style={styles.key}>FECHA</Text>
@@ -355,35 +355,35 @@ const PDFView = () => {
                         <View style={styles.items}>
                             <View style={styles.viewKeyValueTwo}>
                                 <Text style={styles.key}>BANCO</Text>
-                                <Text style={styles.value}>{pdfData && pdfData["NC-BANCO"] && pdfData["NC-BANCO"]}</Text>
+                                <Text style={styles.value}>{userDB.bank && userDB.bank.banco && userDB.bank.banco}</Text>
                             </View>
                             <View style={styles.viewKeyValueTwo}>
                                 <Text style={styles.key}>DIRECCION DE BANCO</Text>
-                                <Text style={styles.value}>{pdfData && pdfData["NC-DIRECCION DE BANCO"] && pdfData["NC-DIRECCION DE BANCO"]}</Text>
+                                <Text style={styles.value}>{userDB.bank && userDB.bank.direccionDeBanco && userDB.bank.direccionDeBanco}</Text>
                             </View>
                             <View style={styles.viewKeyValueTwo}>
                                 <Text style={styles.key}>CODIGO SWIFT</Text>
-                                <Text style={styles.value}>{pdfData && pdfData["NC-CODIGO SWIFT"] && pdfData["NC-CODIGO SWIFT"]}</Text>
+                                <Text style={styles.value}>{userDB.bank && userDB.bank.codigoSWIFT && userDB.bank.codigoSWIFT}</Text>
                             </View>
                             <View style={styles.viewKeyValueTwo}>
                                 <Text style={styles.key}>NUMERO DE CUENTA EN BS</Text>
-                                <Text style={styles.value}>{pdfData && pdfData["NC-NUMERO DE CUENTA EN BS"] && pdfData["NC-NUMERO DE CUENTA EN BS"]}</Text>
+                                <Text style={styles.value}>{userDB.bank && userDB.bank.cuentaEnBS && userDB.bank.cuentaEnBS}</Text>
                             </View>
                             <View style={styles.viewKeyValueTwo}>
                                 <Text style={styles.key}>NUMERO DE CUENTA EN USD</Text>
-                                <Text style={styles.value}>{pdfData && pdfData["NC-NUMERO DE CUENTA EN USD"] && pdfData["NC-NUMERO DE CUENTA EN USD"]}</Text>
+                                <Text style={styles.value}>{userDB.bank && userDB.bank.cuentaEnUSD && userDB.bank.cuentaEnUSD}</Text>
                             </View>
                             <View style={styles.viewKeyValueTwo}>
                                 <Text style={styles.key}>TIPO DE CUENTA</Text>
-                                <Text style={styles.value}>{pdfData && pdfData["NC-TIPO DE CUENTA"] && pdfData["NC-TIPO DE CUENTA"]}</Text>
+                                <Text style={styles.value}>{userDB.bank && userDB.bank.tipoDeCuenta && userDB.bank.tipoDeCuenta}</Text>
                             </View>
                             <View style={styles.viewKeyValueTwo}>
                                 <Text style={styles.key}>NOMBREA</Text>
-                                <Text style={styles.value}>{pdfData && pdfData["NC-NOMBRE2"] && pdfData["NC-NOMBRE2"]}</Text>
+                                <Text style={styles.value}>{userDB.bank && userDB.bank.nombre2 && userDB.bank.nombre2}</Text>
                             </View>
                             <View style={styles.viewKeyValueTwo}>
                                 <Text style={styles.key}>DIRECCION0</Text>
-                                <Text style={styles.value}>{pdfData && pdfData["NC-DIRECCION"] && pdfData["NC-DIRECCION"]}</Text>
+                                <Text style={styles.value}>{userDB.bank && userDB.bank.direccion && userDB.bank.direccion}</Text>
                             </View>
                         </View>
 
