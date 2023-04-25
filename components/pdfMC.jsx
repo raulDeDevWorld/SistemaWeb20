@@ -518,7 +518,7 @@ function PDFView({ click }) {
                         <View style={styles.viewKeyValue} >
                             <Text style={styles.valueElaborador}></Text>
                             <Text style={styles.valueElaborador}>FECHA:</Text>
-                            <Text style={styles.valueElaboradorLine}>{getDayMonthYear()}</Text>
+                            <Text style={styles.valueElaboradorLine}></Text>
                             <Text style={styles.valueElaborador}></Text>
                         </View>
                         <View style={styles.viewKeyValue} >
