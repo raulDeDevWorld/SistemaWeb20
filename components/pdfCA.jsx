@@ -215,7 +215,7 @@ const PDFView = ({ click }) => {
                             <View style={styles.introItems}>
                                 <View style={styles.introViewKeyValue}>
                                     <Text style={styles.key}>COTIZACIÓN No</Text>
-                                    <Text style={styles.value}>{pdfData && pdfData["CA-COTIZACIÓN No"] && pdfData["CA-COTIZACIÓN No"]}</Text>
+                                    <Text style={styles.value}>{pdfData && pdfData["CA-COTIZACION No"] && pdfData["CA-COTIZACION No"]}</Text>
                                 </View>
                                 <View style={styles.introViewKeyValue}>
                                     <Text style={styles.key}>FECHA</Text>
