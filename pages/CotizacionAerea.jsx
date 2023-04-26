@@ -262,7 +262,7 @@ function CotizacionTerrestre() {
                         <div className={style.firstItems}>
                             <div>
                                 <label htmlFor="">COTIZACIÓN No</label>
-                                <input type="text" name={"COTIZACIÓN No"} onChange={handleEventChange} defaultValue={pdfData["CA-COTIZACION No"] && pdfData["CA-COTIZACION No"]} />
+                                <input type="text" name={"COTIZACION No"} onChange={handleEventChange} defaultValue={pdfData["CA-COTIZACION No"] && pdfData["CA-COTIZACION No"]} />
                             </div>
                             <div>
                                 <label htmlFor="">FECHA</label>
