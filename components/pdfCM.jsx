@@ -389,14 +389,29 @@ const PDFView = ({ click }) => {
                             <Text style={styles.key}>FLETE TOTAL</Text>
                         </View>
 
-                   {     pdfData && pdfData["CM-MEDIO DE TRANSPORTE"] && pdfData["CM-MEDIO DE TRANSPORTE"] !== "" && pdfData["CM-MEDIO DE TRANSPORTE"] !== "PORTA CONTENEDORES" &&
+                   {     pdfData && pdfData["CM-MEDIO DE TRANSPORTE"] && pdfData["CM-MEDIO DE TRANSPORTE"] !== "" && pdfData["CM-MEDIO DE TRANSPORTE"] !== "PORTA CONTENEDORES" ?
 
 <View style={styles.viewKeyValueTwo}>
                             <Text style={styles.key}>DETALLE</Text>
                             <Text style={styles.key}>FLETE W/M </Text>
-                            <Text style={styles.key}>CANTIDAD W/M</Text>
+                            <Text style={styles.key}>W/M</Text>
                             <Text style={styles.key}>FLETE TOTAL</Text>
-                        </View>}
+                        </View>
+:
+<View style={styles.viewKeyValueTwo}>
+                            <Text style={styles.key}>DETALLE</Text>
+                            <Text style={styles.key}>FLETE UNITARIO</Text>
+                            <Text style={styles.key}>CANTIDAD</Text>
+                            <Text style={styles.key}>FLETE TOTAL</Text>
+                        </View>
+
+
+
+
+
+
+
+}
 
 
                         {
