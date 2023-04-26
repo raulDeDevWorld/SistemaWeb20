@@ -389,6 +389,16 @@ const PDFView = ({ click }) => {
                             <Text style={styles.key}>FLETE TOTAL</Text>
                         </View>
 
+                   {     pdfData && pdfData["CM-MEDIO DE TRANSPORTE"] && pdfData["CM-MEDIO DE TRANSPORTE"] !== "" && pdfData["CM-MEDIO DE TRANSPORTE"] !== "PORTA CONTENEDORES" &&
+
+<View style={styles.viewKeyValueTwo}>
+                            <Text style={styles.key}>DETALLE</Text>
+                            <Text style={styles.key}>FLETE W/M </Text>
+                            <Text style={styles.key}>CANTIDAD W/M</Text>
+                            <Text style={styles.key}>FLETE TOTAL</Text>
+                        </View>}
+
+
                         {
                             pdfData.tarifa && pdfData.tarifa.map((i, index) => {
                                 return (
